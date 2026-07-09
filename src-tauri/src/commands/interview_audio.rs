@@ -387,14 +387,14 @@ fn build_input_stream<T, F, E>(
     packetizer: Arc<Mutex<Pcm16Packetizer>>,
     convert: F,
     err_fn: E,
-) -> Result<Stream, cpal::Error>
+) -> Result<Stream, cpal::BuildStreamError>
 where
     T: cpal::SizedSample,
     F: Fn(T) -> f32 + Send + Sync + 'static,
-    E: FnMut(cpal::Error) + Send + 'static,
+    E: FnMut(cpal::StreamError) + Send + 'static,
 {
     device.build_input_stream(
-        config.clone(),
+        config,
         move |data: &[T], _| {
             let mono = interleaved_to_mono_f32(data, channels, &convert);
             let pcm16 = resample_f32_to_pcm16(&mono, input_sample_rate);
