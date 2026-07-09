@@ -1,0 +1,70 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+# RC artifacts pulled from CI for local Windows / Intel Mac verification.
+# These are pre-release binaries downloaded via `gh run download`, never
+# meant for the repo.
+dist-rc/
+*.tsbuildinfo
+
+# Rust build artifacts
+src-tauri/target/
+
+# Tauri generated files
+src-tauri/gen/
+
+# Environment files
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+
+# Private/local knowledge bases and interview captures
+Roshan-Wiki/
+documents/
+Test-Audio/
+exports/
+**/exports/
+*.m4a
+*.wav
+*.mp3
+*.webm
+*.aac
+*.flac
+
+# Local package caches
+.npm-cache/
+.npm-pack-cache/
+
+# Internal docs (not shipped)
+docs/
+AGENTS.md
+
+# Benchmark and test data (local only)
+tests/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Brainstorm assets (not tracked in source control)
+.superpowers/
+.claude/

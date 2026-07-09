@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>LLM Wiki uses the microphone to transcribe live interview audio.</string>
+  <key>NSScreenCaptureUsageDescription</key>
+  <string>LLM Wiki uses ScreenCaptureKit to capture system audio for live interview transcription.</string>
+</dict>
+</plist>
